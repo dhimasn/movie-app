@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'NavBar',
+  name: 'NavbarComponent',
   props: {
     msg: String
   }

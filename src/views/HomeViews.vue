@@ -1,21 +1,32 @@
 <template>
     <div class="home"></div>
-        <navbar />
+        <NavbarComponent />
             <div id="main-section">
-                <sidebar />
-                <movie-list />
+                <SidebarComponent />
+                <MovielistComponent />
             </div>>
 </template>
 <script>
-import NavBar from '../components/NavBar';
-import MovieList from '../components/MovieList';
-import SideBar from '../components/SideBar';
+import NavbarComponent from '../components/NavbarComponent';
+import MovielistComponent from '../components/MovielistComponent';
+import SidebarComponent from '../components/SidebarComponent';
 export default {
     name:"HomeViews",
     components:{
-        NavBar,
-        MovieList,
-        SideBar
+    NavbarComponent,
+    MovielistComponent,
+    SidebarComponent
     },
 }
 </script>
+<style lang="scss" scoped>
+	.home {
+		display: flex;
+		flex-direction: column;
+
+		#main-section {
+			display: flex;
+			margin-top: 50px;
+		}
+	}
+</style>

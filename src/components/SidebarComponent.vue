@@ -1,12 +1,15 @@
 <template>
-	<div id="sidebar">'Filters'</div>
+	<div id="sidebar">
+		<FiltersComponent />
+	</div>
 </template>
 <script>
+import FiltersComponent from '../components/FiltersComponent';
 export default {
-	name: 'SideBar',
-	props: {
-		msg: String
-	} 
+	name:"SidebarComponent",
+	components:{
+    FiltersComponent,
+	}, 
 }
 </script>
 <style lang='scss' scoped>
