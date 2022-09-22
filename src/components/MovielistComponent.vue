@@ -1,34 +1,27 @@
 <template>
 	<div id="Movie-container">'Movie List'
-		<ul>
-			<li style="color:  white" v-for="(movie, index) in movies" :key="movie.id">
-				Index; {{index}} {{ movie.name }}
-			</li>
-		</ul>
+		<Movie v-for="movie in movies" :key="movie.id" :movie="movie"/>
 	</div>
 </template>
 <script>
+import Movie from "@/components/MovieComponent.vue";
 export default {
+	components:{
+			Movie,
+	},
 	data(){
 		return{
-			movies: [
-				{
-					id:1,
-					name:'movie-1'
-				},
-				{
-					id:2,
-					name:'movie-2'
-				},
-				{
-					id:3,
-					name:'movie-3'
-				}
-			]
+			movies: [],
 		}
 	},
-name: 'MovielistComponent',
-  
+	//computed:{
+		// 	movies(){
+		// 		return this.$store.getters.getMovies;
+		// 	}
+	//},
+	created() {
+		this.movies = this.$store.getters.getMovies;
+	}
 }
 </script>
 <style lang='scss' scoped>

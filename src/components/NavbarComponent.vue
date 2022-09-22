@@ -12,9 +12,16 @@
 <script>
 export default {
   name: 'NavbarComponent',
-  props: {
-    msg: String
-  }
+  watch:{
+			search(){
+				this.store.dispatch('search')
+			}
+	},
+	// data(){
+	// 	return{
+	// 		search:"",
+	// 	},	
+	// }
 }
 </script>
 

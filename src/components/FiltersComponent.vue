@@ -9,10 +9,33 @@
 </template>
 <script>
 export default {
-    name: 'FiltersComponent',
-    props: {
-        msg: String
-    } 
+    name: 'FiltersComponent', 
+    data(){
+        return{
+            filters:[
+                {
+                    name:"Rating Highest",
+                    key:"rating",
+                    order:"desc"
+                },
+                {
+                    name:"Rating lowest",
+                    key:"rating",
+                    order:"desc"
+                },
+                {
+                    name:"year newest",
+                    key:"year",
+                    order:"desc"
+                },
+                {
+                    name:"year oldest",
+                    key:"year",
+                    order:"desc"
+                },
+            ]
+        }
+    }
 }
 </script>
 <style lang='scss' scoped>

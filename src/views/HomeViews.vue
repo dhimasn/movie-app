@@ -1,15 +1,14 @@
 <template>
     <div class="home"></div>
         <NavbarComponent />
-            <div id="main-section">
-                <SidebarComponent />
-                <MovielistComponent />
-            </div>>
+        <SidebarComponent />
+        <MovielistComponent />
+
 </template>
 <script>
-import NavbarComponent from '../components/NavbarComponent';
-import MovielistComponent from '../components/MovielistComponent';
-import SidebarComponent from '../components/SidebarComponent';
+import NavbarComponent from '@/components/NavbarComponent';
+import MovielistComponent from '@/components/MovielistComponent';
+import SidebarComponent from '@/components/SidebarComponent';
 export default {
     name:"HomeViews",
     components:{

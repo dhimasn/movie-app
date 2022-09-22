@@ -4,12 +4,12 @@
 	</div>
 </template>
 <script>
-import FiltersComponent from '../components/FiltersComponent';
+import FiltersComponent from '@/components/FiltersComponent';
 export default {
 	name:"SidebarComponent",
 	components:{
-    FiltersComponent,
-	}, 
+    FiltersComponent
+	} 
 }
 </script>
 <style lang='scss' scoped>

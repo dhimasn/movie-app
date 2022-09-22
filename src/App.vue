@@ -1,9 +1,8 @@
 <template>
   <HomeViews />
   </template>
-
 <script> 
-import HomeViews from './views/HomeViews.vue';
+import HomeViews from '@/views/HomeViews.vue';
 
 export default {
   name: 'App',
